@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeController">
+<children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fx:id="imgLogo" fitHeight="162.0" fitWidth="234.0" layoutX="184.0" layoutY="89.0">
+                     <image>
+                        <Image url="@../../../../../Downloads/rh.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="126.0" layoutY="22.0" prefHeight="49.0" prefWidth="349.0" style="-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.4) , 10, 0.0 , 0 , 1 );" text="Welcome to Recruitment Platform" textFill="STEELBLUE">
+                     <font>
+                        <Font name="Tahoma Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="95.0" prefHeight="49.0" prefWidth="107.0" text="Candidate" textAlignment="CENTER" textFill="#8c9eac">
+                     <font>
+                        <Font name="Tahoma Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="465.0" layoutY="94.0" prefHeight="49.0" prefWidth="89.0" text="Recruiter" textAlignment="CENTER" textFill="#8c9eac">
+                     <font>
+                        <Font name="Tahoma Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="255.0" layoutY="245.0" prefHeight="49.0" prefWidth="107.0" text="Company" textAlignment="CENTER" textFill="#8c9eac">
+                     <font>
+                        <Font name="Tahoma Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Text layoutX="15.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For the candidate, this platform allows them to browse through the offered positions and submit their application seamlessly." textAlignment="CENTER" wrappingWidth="149.33331298828125">
+                     <font>
+                        <Font name="Tahoma" size="10.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="423.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This platform streamlines the recruitment process for recruiters, enabling them to easily access scheduled interviews, applications, and candidate profiles." textAlignment="CENTER" wrappingWidth="168.8033447265625">
+                     <font>
+                        <Font name="Tahoma" size="10.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="btnRec" layoutX="442.0" layoutY="238.0" mnemonicParsing="false" onAction="#handleBtnRec" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #4682b4; -fx-background-radius: 10; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10, 0.0 , 0 , 2 );" text="Look for a Candidate" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnComp" layoutX="240.0" layoutY="359.0" mnemonicParsing="false" onAction="#handleBtnComp" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #4682b4; -fx-background-radius: 10; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10, 0.0 , 0 , 2 );" text="Look for a Employees" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnhome" layoutX="21.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleBtnHome" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #4682b4; -fx-background-radius: 10; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10, 0.0 , 0 , 2 );" text="Look for a Job" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="565.0" layoutY="1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" style="-fx-background-color: #4682b4;" text="x" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Text layoutX="222.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For the company, this platform enables the posting of job vacancies, making the process of advertising job opportunities straightforward." textAlignment="CENTER" wrappingWidth="168.8033447265625">
+                     <font>
+                        <Font name="Tahoma" size="10.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
