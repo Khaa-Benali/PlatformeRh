@@ -17,6 +17,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
+import javafx.scene.layout.AnchorPane;
 
 public class LoginController implements Initializable {
      @FXML
@@ -24,13 +25,16 @@ public class LoginController implements Initializable {
 
     @FXML
     private Label createAccount;
-    @FXML
     private PasswordField password;
 
-  @FXML
     private TextField username;
+    @FXML
+    private AnchorPane AnLogin;
+    @FXML
+    private TextField logUsername;
+    @FXML
+    private PasswordField logPassword;
 
-    @FXML private ImageView imgLogo;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
        createAccount.setOnMouseClicked(event -> handleCreateAccount( ));

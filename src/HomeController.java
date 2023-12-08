@@ -22,14 +22,14 @@ public class HomeController implements Initializable {
 
     @FXML
     private Button btnhome;
-
     @FXML
-    private ImageView imgLogo;
+    private ImageView idimage;
+
 
     @FXML
    public void handleBtnHome(ActionEvent event) {
  try {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("SignUp.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 

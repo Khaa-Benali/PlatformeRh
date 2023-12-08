@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -9,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" type="BorderPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Candidat.CandidatController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Candidat.OpportunitesController">
    <top>
       <AnchorPane prefHeight="48.0" prefWidth="600.0" style="-fx-background-color: #4682B4;" BorderPane.alignment="CENTER">
          <children>
@@ -18,40 +19,31 @@
                   <Font name="Tahoma Bold" size="18.0" />
                </font>
             </Label>
-            <Button layoutX="565.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" style="-fx-background-color: #4682b4;" text="x" textFill="WHITE">
-               <font>
-                  <Font name="Tahoma Bold" size="12.0" />
-               </font>
-            </Button>
          </children>
       </AnchorPane>
    </top>
    <left>
-      <AnchorPane prefHeight="367.0" prefWidth="183.0" style="-fx-background-color: #EBE8E8;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="452.0" prefWidth="169.0" style="-fx-background-color: #EBE8E8;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnhome1111" layoutX="40.0" layoutY="108.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" style="-fx-background-color: #4682b4; -fx-background-radius: 10; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10, 0.0 , 0 , 2 );" text="Home" textFill="WHITE">
+            <Button fx:id="btnHome" layoutX="16.0" layoutY="138.0" mnemonicParsing="false" onAction="#handlebtnHome" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #4682b4; -fx-background-radius: 10; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10, 0.0 , 0 , 2 );" text="Home" textFill="WHITE">
                <font>
                   <Font name="Tahoma Bold" size="10.0" />
                </font>
             </Button>
-            <Button fx:id="btnhome11111" layoutX="40.0" layoutY="155.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" style="-fx-background-color: #4682b4; -fx-background-radius: 10; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10, 0.0 , 0 , 2 );" text="Profile" textFill="WHITE">
+            <Button fx:id="btnProfile" layoutX="18.0" layoutY="198.0" mnemonicParsing="false" onAction="#handlebtnProfile" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #4682b4; -fx-background-radius: 10; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10, 0.0 , 0 , 2 );" text="Profile" textFill="WHITE">
                <font>
                   <Font name="Tahoma Bold" size="10.0" />
                </font>
             </Button>
-            <Button fx:id="btnhome111111" layoutX="40.0" layoutY="205.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" style="-fx-background-color: #4682b4; -fx-background-radius: 10; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10, 0.0 , 0 , 2 );" text="Opportunites" textFill="WHITE">
+            <Button layoutX="17.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #4682b4; -fx-background-radius: 10; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10, 0.0 , 0 , 2 );" text="Opportunites" textFill="WHITE">
                <font>
                   <Font name="Tahoma Bold" size="10.0" />
                </font>
             </Button>
-            <Button fx:id="btnhome1111111" layoutX="40.0" layoutY="254.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" style="-fx-background-color: #4682b4; -fx-background-radius: 10; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10, 0.0 , 0 , 2 );" text="Applications" textFill="WHITE">
-               <font>
-                  <Font name="Tahoma Bold" size="10.0" />
-               </font>
-            </Button>
-            <ImageView fitHeight="77.0" fitWidth="81.0" layoutX="52.0" layoutY="12.0">
+            <ImageView fitHeight="99.0" fitWidth="125.0" layoutX="20.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="116.0" fitWidth="117.0" layoutX="25.0" layoutY="6.0">
                <image>
-                  <Image url="@../../../../../Bureau/useer.png" />
+                  <Image url="@../useer.png" />
                </image>
             </ImageView>
          </children>
@@ -60,72 +52,67 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="100.0" layoutY="11.0" prefHeight="25.0" prefWidth="223.0" text="Explore our current opportunities" textFill="STEELBLUE">
+            <Label layoutX="35.0" layoutY="16.0" prefHeight="25.0" prefWidth="223.0" text="Explore our current opportunities" textFill="#d0792c">
                <font>
                   <Font name="Tahoma Bold" size="13.0" />
                </font>
             </Label>
             <AnchorPane layoutX="26.0" layoutY="65.0" prefHeight="159.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10, 0.0 , 0 , 2 );">
                <children>
-                  <Text layoutX="100.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="poste " wrappingWidth="137.70379638671875" />
-                  <Text fill="STEELBLUE" layoutX="10.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DatePublication :" />
-                  <Text layoutX="109.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="06/09/2023" />
-                  <Label layoutX="14.0" layoutY="5.0" text="Titre :" textFill="STEELBLUE" />
-                  <Text layoutX="99.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="poste architecte d'intérieur" />
-                  <Label layoutX="14.0" layoutY="57.0" text="Description :" textFill="STEELBLUE" />
-                  <Button layoutX="207.0" layoutY="126.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="60.0" style="-fx-background-color: #418442;" text="Apply" textFill="WHITE">
+                  <Text fx:id="poste1" layoutX="109.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="poste " wrappingWidth="137.70379638671875" />
+                  <Text fill="STEELBLUE" layoutX="10.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DatePublication :" />
+                  <Text fx:id="date1" layoutX="110.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="06/09/2023" />
+                  <Label layoutX="10.0" layoutY="37.0" text="Titre :" textFill="STEELBLUE" />
+                  <Text fx:id="titre1" layoutX="107.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="poste architecte d'intérieur" />
+                  <Label layoutX="10.0" layoutY="61.0" text="Description :" textFill="STEELBLUE" />
+                  <Button fx:id="btnApply1" layoutX="215.0" layoutY="131.0" mnemonicParsing="false" onAction="#handlebtnApply1" prefHeight="23.0" prefWidth="59.0" style="-fx-background-color: #418442;" text="Apply" textFill="WHITE">
                      <font>
                         <Font name="Tahoma Bold" size="12.0" />
                      </font>
                   </Button>
+                  <Text fill="STEELBLUE" layoutX="10.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exigences :" />
+                  <Text fill="STEELBLUE" layoutX="9.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id :" />
+                  <Text fx:id="ID1" layoutX="106.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12345" wrappingWidth="55.4700927734375" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="27.0" layoutY="245.0" prefHeight="159.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10, 0.0 , 0 , 2 );">
+            <AnchorPane layoutX="364.0" layoutY="34.0" prefHeight="407.0" prefWidth="428.0" style="-fx-background-color: white;">
                <children>
-                  <Text layoutX="100.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="poste " wrappingWidth="137.70379638671875" />
-                  <Text fill="STEELBLUE" layoutX="10.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DatePublication :" />
-                  <Text layoutX="109.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12/07/2023" />
-                  <Label layoutX="14.0" layoutY="5.0" text="Titre :" textFill="STEELBLUE" />
-                  <Text layoutX="99.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="poste ui/ux" />
-                  <Label layoutX="14.0" layoutY="57.0" text="Description :" textFill="STEELBLUE" />
-                  <Button layoutX="207.0" layoutY="126.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="60.0" style="-fx-background-color: #418442;" text="Apply" textFill="WHITE">
+                  <AnchorPane layoutX="19.0" layoutY="83.0" prefHeight="288.0" prefWidth="390.0" style="-fx-background-color: white; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.3) , 10, 0.0 , 0 , 2);">
+                     <children>
+                        <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="193.0" prefWidth="364.0" />
+                        <Button fx:id="delete" layoutX="313.0" layoutY="250.0" mnemonicParsing="false" onAction="#handlebtnDelete" style="-fx-background-color: #e23333;" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font name="Tahoma Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Text fill="#475b91" layoutX="28.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View and manage your submitted applications. " wrappingWidth="352.14837074279785">
                      <font>
-                        <Font name="Tahoma Bold" size="12.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font>
-                  </Button>
+                  </Text>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="350.0" layoutY="65.0" prefHeight="159.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10, 0.0 , 0 , 2 );">
+            <AnchorPane layoutX="26.0" layoutY="248.0" prefHeight="159.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10, 0.0 , 0 , 2 );">
                <children>
-                  <Text layoutX="100.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="poste " wrappingWidth="137.70379638671875" />
-                  <Text fill="STEELBLUE" layoutX="10.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DatePublication :" />
-                  <Text layoutX="109.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="04/10/2023" />
-                  <Label layoutX="14.0" layoutY="5.0" text="Titre :" textFill="STEELBLUE" />
-                  <Text layoutX="99.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="poste full stack developer" />
-                  <Label layoutX="14.0" layoutY="57.0" text="Description :" textFill="STEELBLUE" />
-                  <Button layoutX="207.0" layoutY="126.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="60.0" style="-fx-background-color: #418442;" text="Apply" textFill="WHITE">
+                  <Text fill="STEELBLUE" layoutX="10.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DatePublication :" />
+                  <Label layoutX="10.0" layoutY="37.0" text="Titre :" textFill="STEELBLUE" />
+                  <Label layoutX="10.0" layoutY="61.0" text="Description :" textFill="STEELBLUE" />
+                  <Text fill="STEELBLUE" layoutX="10.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exigences :" />
+                  <Text fill="STEELBLUE" layoutX="9.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id :" />
+                  <Button fx:id="btnApply2" layoutX="215.0" layoutY="131.0" mnemonicParsing="false" onAction="#handlebtnApply2" prefHeight="23.0" prefWidth="60.0" style="-fx-background-color: #418442;" text="Apply" textFill="WHITE">
                      <font>
                         <Font name="Tahoma Bold" size="12.0" />
                      </font>
                   </Button>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="350.0" layoutY="245.0" prefHeight="159.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10, 0.0 , 0 , 2 );">
-               <children>
-                  <Text layoutX="100.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="poste " wrappingWidth="137.70379638671875" />
-                  <Text fill="STEELBLUE" layoutX="10.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DatePublication :" />
-                  <Text layoutX="109.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="03/01/2023" />
-                  <Label layoutX="14.0" layoutY="5.0" text="Titre :" textFill="STEELBLUE" />
-                  <Text layoutX="99.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="poste python developer" />
-                  <Label layoutX="14.0" layoutY="57.0" text="Description :" textFill="STEELBLUE" />
-                  <Button layoutX="207.0" layoutY="126.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="60.0" style="-fx-background-color: #418442;" text="Apply" textFill="WHITE">
-                     <font>
-                        <Font name="Tahoma Bold" size="12.0" />
-                     </font>
-                  </Button>
+                  <Text fx:id="poste2" layoutX="110.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="poste " wrappingWidth="137.70379638671875" />
+                  <Text fx:id="titre2" layoutX="109.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="poste ui/ux" />
+                  <Text fx:id="date2" layoutX="109.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12/07/2023" />
+                  <Text fx:id="ID2" layoutX="109.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="88659" wrappingWidth="47.6771240234375" />
                </children>
             </AnchorPane>
          </children>
       </AnchorPane>
    </center>
-</fx:root>
+</BorderPane>

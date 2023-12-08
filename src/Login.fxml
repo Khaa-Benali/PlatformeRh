@@ -10,52 +10,48 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <AnchorPane layoutX="300.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #4682B4;">
-               <children>
-                  <Label layoutX="54.0" layoutY="102.0" text="Welcom back Condidate!" textFill="#201548">
-                     <font>
-                        <Font name="Tahoma Bold" size="17.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="username" layoutX="44.0" layoutY="170.0" prefHeight="30.0" prefWidth="220.0" promptText="Username" />
-                  <PasswordField fx:id="password" layoutX="44.0" layoutY="216.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" />
-                  <Button fx:id="btnLogin" layoutX="118.0" layoutY="270.0" mnemonicParsing="false" onAction="#handleBtnLogin" prefHeight="22.0" prefWidth="63.0" style="-fx-background-color: white;" text="Login" textFill="#201548">
-                     <font>
-                        <Font name="System Bold" size="10.0" />
-                     </font>
-                  </Button>
-                  <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="107.0" layoutY="13.0">
-                     <image>
-                        <Image url="@../../../../../Downloads/users.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="37.0" layoutY="368.0" prefHeight="17.0" prefWidth="142.0" text="New to Recruitment Platform ?" textFill="#100a2f">
-                     <font>
-                        <Font name="Tahoma" size="10.0" />
-                     </font></Label>
-                  <Label fx:id="createAccount" layoutX="183.0" layoutY="369.0" onMouseClicked="#handleCreateAccount" text="Create an account" textFill="#215569" underline="true">
-                     <font>
-                        <Font size="10.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
             <AnchorPane layoutX="6.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: white;">
                <children>
-                  <ImageView fx:id="imgLogo" fitHeight="233.0" fitWidth="288.0" layoutX="5.0" layoutY="94.0">
-                     <image>
-                        <Image url="@../../../../../Downloads/rh.jpg" />
-                     </image>
-                  </ImageView>
                   <Label layoutX="35.0" layoutY="56.0" prefHeight="46.0" prefWidth="227.0" text="Recruitment Platform" textFill="STEELBLUE">
                      <font>
                         <Font name="Tahoma Bold" size="20.0" />
                      </font>
                   </Label>
+                  <ImageView fitHeight="189.0" fitWidth="219.0" layoutX="40.0" layoutY="127.0">
+                     <image>
+                        <Image url="@signup.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="AnLogin" layoutX="309.0" prefHeight="400.0" prefWidth="392.0" style="-fx-background-color: #4682B4;">
+               <children>
+                  <Label layoutX="140.0" layoutY="56.0" prefHeight="21.0" prefWidth="124.0" text="Join Us Now" textFill="#e9e9e9">
+                     <font>
+                        <Font name="Tahoma Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnLogin" layoutX="132.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleBtnLogin" prefHeight="22.0" prefWidth="124.0" style="-fx-background-color: #d0792c;" text="Log In" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="63.0" layoutY="363.0" prefHeight="17.0" prefWidth="175.0" text="New to Recruitment Platform ?" textFill="#100a2f">
+                     <font>
+                        <Font name="Tahoma" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="createAccount" layoutX="237.0" layoutY="361.0" onMouseClicked="#handleCreateAccount" prefHeight="21.0" prefWidth="91.0" text="Create an account" textFill="#d0792c" underline="true">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="logUsername" layoutX="86.0" layoutY="121.0" prefHeight="38.0" prefWidth="220.0" promptText="Username" />
+                  <PasswordField fx:id="logPassword" layoutX="86.0" layoutY="197.0" prefHeight="38.0" prefWidth="220.0" promptText="Password" />
                </children>
             </AnchorPane>
          </children>

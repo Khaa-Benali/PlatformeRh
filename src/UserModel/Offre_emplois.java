@@ -11,17 +11,19 @@ import java.util.ArrayList;
  * @author khadi
  */
 public class Offre_emplois {
+    private int IdOffre;
     private String titre;
     private String description;
-    private Date datePublication;
+    private String datePublication;
     private List<String> exigences;
 
     // Constructeur
-    public Offre_emplois(String titre, String description) {
+    public Offre_emplois(int id,String titre, String description,String date) {
+        this.IdOffre=id;
         this.titre = titre;
         this.description = description;
-        this.datePublication = new Date();
-        this.exigences= new ArrayList<>();// La date de publication est initialement la date actuelle
+        this.datePublication = date;
+        this.exigences= new ArrayList<>();
     }
 
     // Getters et setters pour l'attribut titre
@@ -43,11 +45,11 @@ public class Offre_emplois {
     }
 
     // Getters et setters pour l'attribut datePublication
-    public Date getDatePublication() {
+    public String getDatePublication() {
         return datePublication;
     }
 
-    public void setDatePublication(Date datePublication) {
+    public void setDatePublication(String datePublication) {
         this.datePublication = datePublication;
     }
 public void setExigences(List<String> exigences) {
@@ -56,5 +58,4 @@ public void setExigences(List<String> exigences) {
 public List<String> getExigences( ) {
        return exigences;
     }
-    // Vous pouvez également ajouter d'autres getters et setters si nécessaire...
 }

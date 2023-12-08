@@ -1,6 +1,6 @@
 package UserModel;
 
-public sealed abstract class User permits  Candidat {
+public sealed abstract class User permits  Candidat , Recruteur {
     private  int id;
     private  String nom;
     private  String prenom;

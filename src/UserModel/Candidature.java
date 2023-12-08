@@ -3,34 +3,30 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package UserModel;
-import UserModel.Candidat;
 
-/**
- *
- * @author khadi
- */
+
 public class Candidature {
-    private Candidat candidat;
     private int idCandidature;
-    private Offre_emplois offre;
-    private String statut; // Peut être "Acceptée", "Refusée", etc.
-    
-    //constructeur 
-    public Candidature(int idCandidat , Offre_emplois offre) {
-    this.idCandidature=idCandidature;
-    this.offre=offre;
-    }
-    // getters setters
-    public Candidat geCandidat (){
-        return candidat;}
-    public int getIdCandidat (){
-        return idCandidature;}
-    //get offre set offre
-    public Offre_emplois getOffre() {
-        return offre;
+    private int idOffre;  // Ajout de la propriété idOffre
+
+    public Candidature(int idCandidature, int idOffre) {
+        this.idCandidature = idCandidature;
+        this.idOffre = idOffre;
     }
 
-    public void setOffre(Offre_emplois offre) {
-        this.offre = offre;
+    public int getIdCandidature() {
+        return idCandidature;
+    }
+
+    public void setIdCandidature(int idCandidature) {
+        this.idCandidature = idCandidature;
+    }
+
+    public int getIdOffre() {
+        return idOffre;
+    }
+
+    public void setIdOffre(int idOffre) {
+        this.idOffre = idOffre;
     }
 }

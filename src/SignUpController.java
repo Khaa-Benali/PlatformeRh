@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -38,8 +39,6 @@ static LinkedList<Candidat> list = new LinkedList<>();
 
     @FXML
     private TextField lastname;
-    @FXML
-    private ImageView usersLogo;
     @FXML
     private TextField username;
     @FXML
@@ -82,15 +81,20 @@ private void handleBtnSignup(ActionEvent event) {
         String user = username.getText();
         String mail = email.getText();
         String pass = password.getText();
+        String confirmPass = confirmpassword.getText();
+
+            if (!pass.equals(confirmPass)) {
+                showAlert("Erreur","Error" ,"Les mots de passe ne correspondent pas.");
+                return;
+            }
         Candidat candidat = new Candidat(candidatId, nom, prenom, user, mail, candidatCin, pass);
         list.add(candidat);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Candidat/Candidat.fxml"));
         Parent root = loader.load();
-
-        // Access the controller and set Candidat details after loading the FXML
         CandidatController candidatController = loader.getController();
         candidatController.setCandidatDetails(candidat);
+ 
 
         // Now, you can show the scene
         Scene scene = new Scene(root);
@@ -101,7 +105,13 @@ private void handleBtnSignup(ActionEvent event) {
         Logger.getLogger(SignUpController.class.getName()).log(Level.SEVERE, null, ex);
     }
 }
-
-    
- 
+    private void showAlert(String title,String header, String content) 
+     {
+         Alert alert = new Alert(Alert.AlertType.ERROR);
+       
+       alert.setTitle(title);
+       alert.setHeaderText(header);
+       alert.setContentText(content);
+       alert.showAndWait();
+    }
 }

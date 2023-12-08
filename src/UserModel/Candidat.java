@@ -88,7 +88,7 @@ public final class Candidat extends User implements Authentification {
     }
 
     // Méthode pour postuler à une offre
-    public void postuler(Offre_emplois offre) {
+    public void postuler(int offre) {
         Candidature candidature = new Candidature(getId(), offre);
         candidatures.add(candidature);
     }
