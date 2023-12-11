@@ -4,7 +4,6 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -22,11 +21,6 @@
                   <Font name="Tahoma Bold" size="18.0" />
                </font>
             </Label>
-            <Button layoutX="965.0" layoutY="1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" style="-fx-background-color: #4682b4;" text="x" textFill="WHITE">
-               <font>
-                  <Font name="Tahoma Bold" size="12.0" />
-               </font>
-            </Button>
          </children>
       </AnchorPane>
    </top>
@@ -43,7 +37,7 @@
                   <Font name="Tahoma Bold" size="10.0" />
                </font>
             </Button>
-            <Button layoutX="22.0" layoutY="279.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #4682b4; -fx-background-radius: 10; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10, 0.0 , 0 , 2 );" text="Entretiens" textFill="WHITE">
+            <Button layoutX="19.0" layoutY="280.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #4682b4; -fx-background-radius: 10; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10, 0.0 , 0 , 2 );" text="Entretiens" textFill="WHITE">
                <font>
                   <Font name="Tahoma Bold" size="10.0" />
                </font>
@@ -78,7 +72,7 @@
                      </font>
                   </Label>
                   <TextField fx:id="idEntext" layoutX="109.0" layoutY="14.0" prefHeight="25.0" prefWidth="127.0" />
-                  <Button fx:id="add" layoutX="284.0" layoutY="157.0" mnemonicParsing="false" onAction="#handlebtnAdd" prefHeight="23.0" prefWidth="73.0" style="-fx-background-color: #4aa152;" text="Add" textFill="WHITE">
+                  <Button fx:id="add" layoutX="371.0" layoutY="168.0" mnemonicParsing="false" onAction="#handlebtnAdd" prefHeight="23.0" prefWidth="103.0" style="-fx-background-color: #4aa152;" text="Add" textFill="WHITE">
                      <font>
                         <Font name="Tahoma Bold" size="12.0" />
                      </font>
@@ -103,67 +97,46 @@
                         <Font name="Tahoma" size="12.0" />
                      </font>
                   </Label>
-                  <Label layoutX="285.0" layoutY="62.0" prefHeight="17.0" prefWidth="85.0" text="Candidature :">
+                  <Label layoutX="283.0" layoutY="63.0" prefHeight="17.0" prefWidth="91.0" text="Id Candidature :">
                      <font>
                         <Font name="Tahoma" size="12.0" />
                      </font>
                   </Label>
-                  <Button fx:id="update" layoutX="364.0" layoutY="157.0" mnemonicParsing="false" onAction="#handlebtnUpdate" prefHeight="23.0" prefWidth="71.0" style="-fx-background-color: #4682b4;" text="Update" textFill="WHITE">
+                  <Button fx:id="update" layoutX="497.0" layoutY="168.0" mnemonicParsing="false" onAction="#handlebtnUpdate" prefHeight="23.0" prefWidth="98.0" style="-fx-background-color: #4682b4;" text="Update" textFill="WHITE">
                      <font>
                         <Font name="Tahoma Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="delete" layoutX="441.0" layoutY="157.0" mnemonicParsing="false" onAction="#handlebtndelete" prefHeight="23.0" prefWidth="60.0" style="-fx-background-color: #e63a3a;" text="Delete" textFill="WHITE">
+                  <Button fx:id="delete" layoutX="615.0" layoutY="168.0" mnemonicParsing="false" onAction="#handlebtndelete" prefHeight="23.0" prefWidth="95.0" style="-fx-background-color: #e63a3a;" text="Delete" textFill="WHITE">
                      <font>
                         <Font name="Tahoma Bold" size="12.0" />
                      </font>
                   </Button>
                   <DatePicker fx:id="date" layoutX="107.0" layoutY="102.0" prefHeight="25.0" prefWidth="133.0" />
-                  <ChoiceBox layoutX="109.0" layoutY="59.0" prefHeight="25.0" prefWidth="129.0" />
+                  <ChoiceBox fx:id="idType" layoutX="109.0" layoutY="59.0" prefHeight="25.0" prefWidth="129.0" />
                   <TextField fx:id="heure" layoutX="108.0" layoutY="150.0" prefHeight="25.0" prefWidth="133.0" />
-                  <TextField fx:id="lieu" layoutX="368.0" layoutY="13.0" prefHeight="25.0" prefWidth="127.0" />
-                  <TextField fx:id="candidature" layoutX="368.0" layoutY="60.0" prefHeight="25.0" prefWidth="127.0" />
+                  <TextField fx:id="lieu" layoutX="379.0" layoutY="13.0" prefHeight="25.0" prefWidth="127.0" />
+                  <TextField fx:id="candidature" layoutX="380.0" layoutY="60.0" prefHeight="25.0" prefWidth="127.0" />
                   <Label layoutX="550.0" layoutY="7.0" prefHeight="17.0" prefWidth="125.0" text="Evaluez l'entrentien :">
                      <font>
                         <Font name="Tahoma" size="12.0" />
                      </font>
                   </Label>
-                  <Label layoutX="559.0" layoutY="34.0" prefHeight="17.0" prefWidth="85.0" text="Id Entretien :">
+                  <TextField fx:id="note" layoutX="657.0" layoutY="37.0" prefHeight="25.0" prefWidth="113.0" />
+                  <TextField fx:id="com" layoutX="656.0" layoutY="80.0" prefHeight="73.0" prefWidth="116.0" />
+                  <Label layoutX="561.0" layoutY="42.0" prefHeight="17.0" prefWidth="85.0" text="Note :">
                      <font>
                         <Font name="Tahoma" size="12.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="657.0" layoutY="29.0" prefHeight="25.0" prefWidth="76.0" />
-                  <TextField fx:id="note" layoutX="657.0" layoutY="63.0" prefHeight="25.0" prefWidth="79.0" />
-                  <TextField fx:id="com" layoutX="657.0" layoutY="94.0" prefHeight="73.0" prefWidth="121.0" />
-                  <Label layoutX="561.0" layoutY="66.0" prefHeight="17.0" prefWidth="85.0" text="Note :">
+                  <Label layoutX="560.0" layoutY="82.0" prefHeight="17.0" prefWidth="85.0" text="Commentaires :">
                      <font>
                         <Font name="Tahoma" size="12.0" />
                      </font>
                   </Label>
-                  <Label layoutX="560.0" layoutY="100.0" prefHeight="17.0" prefWidth="85.0" text="Commentaires :">
-                     <font>
-                        <Font name="Tahoma" size="12.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="AddEValuation" layoutX="558.0" layoutY="175.0" mnemonicParsing="false" onAction="#handlebtnAddEValuation" prefHeight="23.0" prefWidth="221.0" style="-fx-background-color: #4aa152;" text="Add Evaluation" textFill="WHITE">
-                     <font>
-                        <Font name="Tahoma Bold" size="12.0" />
-                     </font>
-                  </Button>
                </children>
             </AnchorPane>
-            <TableView fx:id="tableauEntr" layoutX="21.0" layoutY="18.0" prefHeight="215.0" prefWidth="784.0">
-               <columns>
-                  <TableColumn prefWidth="78.66663932800293" text="Id Entretien" />
-                  <TableColumn prefWidth="114.00003814697266" text="Type" />
-                  <TableColumn prefWidth="107.99995422363281" text="Date" />
-                  <TableColumn prefWidth="101.33340454101562" text="Heure" />
-                  <TableColumn prefWidth="106.00003051757812" text="Lieu" />
-                  <TableColumn prefWidth="109.99993896484375" text="Id Candidature" />
-                  <TableColumn prefWidth="162.6666259765625" text="Evaluation" />
-               </columns>
-            </TableView>
+            <TableView fx:id="tableauEntr" layoutX="21.0" layoutY="18.0" prefHeight="215.0" prefWidth="783.0" />
          </children>
       </AnchorPane>
    </center>

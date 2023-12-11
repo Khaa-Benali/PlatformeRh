@@ -8,7 +8,7 @@ public final class Candidat extends User implements Authentification {
     private String motDePasse;
     private int cin;
     private Cv cv;
-    private final List<Candidature> candidatures;
+    public final List<Candidature> candidatures;
 
     // Constructeur record
     public Candidat(int id, String nom, String prenom, String username, String email, int cin, String motDePasse) {
@@ -86,10 +86,11 @@ public final class Candidat extends User implements Authentification {
     public List<Candidature> getCandidatures() {
         return candidatures;
     }
+ 
 
     // Méthode pour postuler à une offre
-    public void postuler(int offre) {
-        Candidature candidature = new Candidature(getId(), offre);
+    public void postuler(int idcandidature,int offre) {
+        Candidature candidature = new Candidature(idcandidature, offre);
         candidatures.add(candidature);
     }
 

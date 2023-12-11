@@ -119,7 +119,7 @@ private TableColumn<Candidature, Integer> idOffreColumn;
        String poste= poste1.getText();
        String date= date1.getText();
        String titre= titre1.getText();
-       Offre_emplois offre = new Offre_emplois(id,titre,poste,date);
+     //  Offre_emplois offre = new Offre_emplois(id,titre,poste,date);
        Candidature candidature = new Candidature(3, id);
        candidatures.add(candidature);
     }
@@ -130,7 +130,7 @@ private TableColumn<Candidature, Integer> idOffreColumn;
        String poste= poste2.getText();
        String date= date2.getText();
        String titre= titre2.getText();
-       Offre_emplois offre = new Offre_emplois(id,titre,poste,date);
+       //Offre_emplois offre = new Offre_emplois(id,titre,poste,date);
        Candidature candidature = new Candidature(4, id);
        candidatures.add(candidature);
     }

@@ -3,59 +3,69 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package UserModel;
-import java.util.Date; 
-import java.util.List; 
-import java.util.ArrayList;
-/**
- *
- * @author khadi
- */
-public class Offre_emplois {
-    private int IdOffre;
-    private String titre;
-    private String description;
-    private String datePublication;
-    private List<String> exigences;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
 
-    // Constructeur
-    public Offre_emplois(int id,String titre, String description,String date) {
-        this.IdOffre=id;
-        this.titre = titre;
-        this.description = description;
-        this.datePublication = date;
-        this.exigences= new ArrayList<>();
+import java.util.Date;
+import java.util.List;
+
+public class Offre_emplois {
+
+    public static void add(Offre_emplois nouvelleOffre) {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
+    private SimpleIntegerProperty idOffre;
+    private SimpleStringProperty titre;
+    private SimpleStringProperty description;
+    private SimpleObjectProperty<Date> datePublication;
+    private SimpleStringProperty exigences;
+
+    public Offre_emplois(int idOffre, String titre, String description, Date datePublication, List<String> exigences) {
+        this.idOffre = new SimpleIntegerProperty(idOffre);
+        this.titre = new SimpleStringProperty(titre);
+        this.description = new SimpleStringProperty(description);
+        this.datePublication = new SimpleObjectProperty<>(datePublication);
+        this.exigences = new SimpleStringProperty(String.join(", ", exigences));
     }
 
-    // Getters et setters pour l'attribut titre
-    public String getTitre() {
+    public SimpleIntegerProperty idOffreProperty() {
+        return idOffre;
+    }
+
+    public SimpleStringProperty titreProperty() {
         return titre;
     }
 
-    public void setTitre(String titre) {
-        this.titre = titre;
-    }
-
-    // Getters et setters pour l'attribut description
-    public String getDescription() {
+    public SimpleStringProperty descriptionProperty() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    // Getters et setters pour l'attribut datePublication
-    public String getDatePublication() {
+    public SimpleObjectProperty<Date> datePublicationProperty() {
         return datePublication;
     }
 
-    public void setDatePublication(String datePublication) {
-        this.datePublication = datePublication;
+    public SimpleStringProperty exigencesProperty() {
+        return exigences;
     }
-public void setExigences(List<String> exigences) {
-        this.exigences = exigences;
+
+    public int getIdOffre() {
+        return idOffre.get();
     }
-public List<String> getExigences( ) {
-       return exigences;
+
+    public String getTitre() {
+        return titre.get();
+    }
+
+    public String getDescription() {
+        return description.get();
+    }
+
+    public Date getDatePublication() {
+        return datePublication.get();
+    }
+
+    public String getExigences() {
+        return exigences.get();
     }
 }

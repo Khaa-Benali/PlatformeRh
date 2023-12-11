@@ -7,7 +7,8 @@ package UserModel;
 
 public class Candidature {
     private int idCandidature;
-    private int idOffre;  // Ajout de la propriété idOffre
+    private int idOffre;
+    private String statuts ="En attente";
 
     public Candidature(int idCandidature, int idOffre) {
         this.idCandidature = idCandidature;

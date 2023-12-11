@@ -1,3 +1,4 @@
+import static UserModel.SoundPlayer.playSound;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -51,6 +52,7 @@ public class HomeController implements Initializable {
  
         btnRec.setOnAction(event -> handleBtnRec( event));
         btnComp.setOnAction(event -> handleBtnComp( event));
+        playSound("C:\\Users\\khadi\\OneDrive\\Documents\\NetBeansProjects\\interfacesPRFX\\src\\welcome.mp3");
     }
 
     @FXML

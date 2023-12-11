@@ -11,14 +11,12 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-enum Type {technique,Comportementale}
     
 public final class Recruteur extends User {
     private final String specialisation;
     private final List<Candidature> candidatures;
     private final Map<Candidat, Cv> candidatCv;
     private final Map<Candidature, Entretien> entretiens;
-    private final Map<Entretien, EvaluationEntretien> evaluationEntretiens;
 
     // Constructeur record
     public Recruteur(int id, String nom, String prenom, String email, String specialisation) {
@@ -26,7 +24,6 @@ public final class Recruteur extends User {
         this.specialisation = specialisation;
         this.candidatures = new ArrayList<>();
         this.entretiens = new HashMap<>();
-        this.evaluationEntretiens = new HashMap<>();
         this.candidatCv = new HashMap<>();
     }
 
@@ -50,10 +47,6 @@ public final class Recruteur extends User {
         return entretiens;
     }
 
-    // Getter pour evaluationsEntretiens
-    public Map<Entretien, EvaluationEntretien> getEvaluationEntretiens() {
-        return evaluationEntretiens;
-    }
 
     // Méthode pour évaluer un entretien
     public void evaluerEntretien(Entretien entretien) {
@@ -63,8 +56,9 @@ public final class Recruteur extends User {
         int note = Integer.parseInt(scanner.nextLine());
         System.out.print("Commentaires : ");
         String commentaire = scanner.nextLine();
-        EvaluationEntretien evaluation = new EvaluationEntretien(entretien.getId(), note, commentaire);
-        evaluationEntretiens.put(entretien, evaluation);
+        entretien.setNote(note);
+        entretien.setCommentaires(commentaire);
+        
     }
 
     /* // Méthode pour filtrer les candidatures selon les exigences de l'offre et les compétences du CV

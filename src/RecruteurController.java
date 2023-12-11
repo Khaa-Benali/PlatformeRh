@@ -1,3 +1,4 @@
+import static UserModel.SoundPlayer.playSound;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -26,7 +27,7 @@ public class RecruteurController implements Initializable {
         btnhome.setOnAction(event -> handlebrnHome(event));
         btnEntretiens.setOnAction(event -> handlebtnEntretiens(event));
         btnCandidatures.setOnAction(event -> handlebtnCandidatures(event));
-                
+                playSound("C:\\Users\\khadi\\OneDrive\\Documents\\NetBeansProjects\\interfacesPRFX\\src\\welcomeIyed.mp3");
     }    
 
     @FXML
