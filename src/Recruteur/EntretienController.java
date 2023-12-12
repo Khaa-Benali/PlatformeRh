@@ -69,8 +69,8 @@ public class EntretienController implements Initializable {
     
  
     private ObservableList<Entretien> entretiens = FXCollections.observableArrayList(
-           new Entretien(1,126,"1/12/2023","9:30","Tunis","technique",9,"Excelent"),
-            new Entretien(2,126,"1/03/2023","8:30","Tunis","technique",5,"Passable")
+           new Entretien(1,126,"1/12/2023","Tunis","9:30","technique",9,"Excelent"),
+            new Entretien(2,120,"1/03/2023","Tunis","8:30","technique",5,"Passable")
     );
     @FXML
     private ChoiceBox<String> idType;
@@ -173,7 +173,7 @@ public class EntretienController implements Initializable {
                 Pour l'exemple, nous utilisons simplement le nombre d'éléments dans la liste + 1. 
                 Vous pouvez adapter cette logique selon vos besoins. */
                 entretiens.size() + 1, 
-                idCandidature, dateValue, heureValue, lieuValue, typeValue, noteValue, commentaireValue
+                idCandidature, dateValue, lieuValue, heureValue, typeValue, noteValue, commentaireValue
         );
 
         // Ajouter le nouvel entretien à la liste

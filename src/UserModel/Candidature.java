@@ -9,6 +9,7 @@ public class Candidature {
     private int idCandidature;
     private int idOffre;
     private String statuts ="En attente";
+    
 
     public Candidature(int idCandidature, int idOffre) {
         this.idCandidature = idCandidature;
@@ -30,4 +31,13 @@ public class Candidature {
     public void setIdOffre(int idOffre) {
         this.idOffre = idOffre;
     }
+      public String getType() {
+        // Implémentez la logique basée sur le statut
+        if ("Acceptée".equals(statuts)) {
+            return "Accepted";
+        } else {
+            return "Other";
+        }
+    }
+
 }

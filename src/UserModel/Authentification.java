@@ -1,4 +1,4 @@
-package User.recrutement;
+package UserModel;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -11,5 +11,5 @@ package User.recrutement;
  */
 @FunctionalInterface
 public interface Authentification {
-    boolean authentifier(String nomUtilisateur, String motDePasse);
+   boolean signUp(int id, String nom, String prenom, String email, String username, int cin, String motDePasse);
 }

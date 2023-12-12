@@ -63,7 +63,7 @@ public class RecruteurController implements Initializable {
     @FXML
     private void handlebtnCandidatures(ActionEvent event) {
          try {
-             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Recruteur/CandidatRec.fxml"));
+             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Recruteur/Candidatures.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
 

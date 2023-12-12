@@ -19,11 +19,6 @@
                   <Font name="Tahoma Bold" size="18.0" />
                </font>
             </Label>
-            <Button layoutX="866.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" style="-fx-background-color: #4682b4;" text="x" textFill="WHITE">
-               <font>
-                  <Font name="Tahoma Bold" size="12.0" />
-               </font>
-            </Button>
          </children>
       </AnchorPane>
    </top>
@@ -59,22 +54,22 @@
          <children>
             <AnchorPane layoutX="24.0" layoutY="82.0" prefHeight="267.0" prefWidth="266.0" style="-fx-background-color: white; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.3) , 10, 0.0 , 0 , 2);">
                <children>
-                  <Label layoutX="20.0" layoutY="28.0" prefHeight="17.0" prefWidth="61.0" text="Identifiant:">
+                  <Label layoutX="20.0" layoutY="28.0" prefHeight="17.0" prefWidth="61.0" text="Identifiant:" textFill="#83bfce">
                      <font>
                         <Font name="Tahoma" size="12.0" />
                      </font>
                   </Label>
-                  <Label layoutX="20.0" layoutY="71.0" prefHeight="17.0" prefWidth="69.0" text="First Name:">
+                  <Label layoutX="20.0" layoutY="71.0" prefHeight="17.0" prefWidth="69.0" text="First Name:" textFill="#83bfce">
                      <font>
                         <Font name="Tahoma" size="12.0" />
                      </font>
                   </Label>
-                  <Label layoutX="21.0" layoutY="164.0" prefHeight="17.0" prefWidth="79.0" text="Email adress:">
+                  <Label layoutX="21.0" layoutY="164.0" prefHeight="17.0" prefWidth="79.0" text="Email adress:" textFill="#83bfce">
                      <font>
                         <Font name="Tahoma" size="12.0" />
                      </font>
                   </Label>
-                  <Label layoutX="20.0" layoutY="113.0" prefHeight="17.0" prefWidth="98.0" text="Last name:">
+                  <Label layoutX="20.0" layoutY="113.0" prefHeight="17.0" prefWidth="98.0" text="Last name:" textFill="#83bfce">
                      <font>
                         <Font name="Tahoma" size="12.0" />
                      </font>
@@ -83,7 +78,7 @@
                   <Line endX="99.00001525878906" endY="1.52587890625E-5" layoutX="129.0" layoutY="82.0" startX="-3.9999847412109375" startY="1.52587890625E-5" stroke="#e0debf" />
                   <Line endX="96.66670227050781" layoutX="128.0" layoutY="126.0" startX="-3.9999847412109375" startY="1.52587890625E-5" stroke="#e0debf" />
                   <Line endX="94.33332824707031" layoutX="131.0" layoutY="174.0" startX="-3.9999847412109375" startY="1.52587890625E-5" stroke="#e0debf" />
-                  <Label layoutX="21.0" layoutY="209.0" prefHeight="17.0" prefWidth="79.0" text="Departement :">
+                  <Label layoutX="21.0" layoutY="209.0" prefHeight="17.0" prefWidth="79.0" text="Departement :" textFill="#83bfce">
                      <font>
                         <Font name="Tahoma" size="12.0" />
                      </font>
@@ -101,24 +96,24 @@
                   <Font name="System Bold Italic" size="24.0" />
                </font>
             </Text>
-            <Text fill="#acacac" layoutX="138.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DRH">
+            <Text fill="#ebc089" layoutX="138.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DRH">
                <font>
                   <Font size="18.0" />
                </font>
             </Text>
             <AnchorPane layoutX="328.0" layoutY="82.0" prefHeight="269.0" prefWidth="350.0" style="-fx-background-color: white; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.3) , 10, 0.0 , 0 , 2);">
                <children>
-                  <Label layoutX="18.0" layoutY="28.0" prefHeight="17.0" prefWidth="152.0" text="Identifiant de l'entreprise:">
+                  <Label layoutX="18.0" layoutY="28.0" prefHeight="17.0" prefWidth="152.0" text="Identifiant de l'entreprise:" textFill="#83bfce">
                      <font>
                         <Font name="Tahoma" size="12.0" />
                      </font>
                   </Label>
-                  <Label layoutX="17.0" layoutY="73.0" prefHeight="17.0" prefWidth="69.0" text=" Name:">
+                  <Label layoutX="17.0" layoutY="73.0" prefHeight="17.0" prefWidth="69.0" text=" Name:" textFill="#83bfce">
                      <font>
                         <Font name="Tahoma" size="12.0" />
                      </font>
                   </Label>
-                  <Label layoutX="19.0" layoutY="113.0" prefHeight="17.0" prefWidth="79.0" text="Adresse:">
+                  <Label layoutX="19.0" layoutY="119.0" prefHeight="17.0" prefWidth="79.0" text="Adresse:" textFill="#83bfce">
                      <font>
                         <Font name="Tahoma" size="12.0" />
                      </font>
@@ -128,28 +123,34 @@
                         <Font name="Tahoma" size="12.0" />
                      </font>
                   </Label>
-                  <Label layoutX="17.0" layoutY="165.0" prefHeight="17.0" prefWidth="79.0" text="Domaine :">
+                  <Label layoutX="17.0" layoutY="165.0" prefHeight="17.0" prefWidth="79.0" text="Domaine :" textFill="#83bfce">
                      <font>
                         <Font name="Tahoma" size="12.0" />
                      </font>
                   </Label>
-                  <Line endX="70.33332824707031" endY="1.52587890625E-5" layoutX="242.0" layoutY="44.0" startX="-59.999969482421875" startY="1.52587890625E-5" stroke="#e0debf" />
-                  <Line endX="70.33332824707031" endY="1.52587890625E-5" layoutX="244.0" layoutY="82.0" startX="-62.666656494140625" startY="1.52587890625E-5" stroke="#e0debf" />
-                  <Line endX="70.33332824707031" endY="1.52587890625E-5" layoutX="248.0" layoutY="123.0" startX="-63.33331298828125" startY="1.52587890625E-5" stroke="#e0debf" />
-                  <Label layoutX="17.0" layoutY="210.0" prefHeight="17.0" prefWidth="79.0" text="Taille :">
+                  <Line endX="54.00006103515625" endY="1.52587890625E-5" layoutX="242.0" layoutY="44.0" startX="-59.999969482421875" startY="1.52587890625E-5" stroke="#e0debf" />
+                  <Line endX="54.00006103515625" endY="1.52587890625E-5" layoutX="244.0" layoutY="82.0" startX="-62.666656494140625" startY="1.52587890625E-5" stroke="#e0debf" />
+                  <Line endX="53.00006103515625" endY="1.52587890625E-5" layoutX="245.0" layoutY="131.0" startX="-63.33331298828125" startY="1.52587890625E-5" stroke="#e0debf" />
+                  <Label layoutX="17.0" layoutY="210.0" prefHeight="17.0" prefWidth="79.0" text="Taille :" textFill="#83bfce">
                      <font>
                         <Font name="Tahoma" size="12.0" />
                      </font>
                   </Label>
-                  <Line endX="70.33332824707031" endY="1.52587890625E-5" layoutX="254.0" layoutY="222.0" startX="-61.33331298828125" stroke="#e0debf" />
-                  <Line endX="70.33332824707031" endY="1.52587890625E-5" layoutX="252.0" layoutY="177.0" startX="-64.6666259765625" stroke="#e0debf" />
-                  <Text layoutX="181.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12345" wrappingWidth="128.8033447265625" />
-                  <Text layoutX="181.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EY" wrappingWidth="136.13671875" />
-                  <Text layoutX="181.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Soukra" wrappingWidth="152.13671875" />
-                  <Text layoutX="187.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IT" wrappingWidth="140.80340576171875" />
-                  <Text layoutX="192.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grande" wrappingWidth="138.80340576171875" />
+                  <Line endX="59.00006103515625" layoutX="243.0" layoutY="222.0" startX="-61.33331298828125" stroke="#e0debf" />
+                  <Line endX="52.803466796875" endY="-1.0" layoutX="246.0" layoutY="177.0" startX="-64.6666259765625" stroke="#e0debf" />
+                  <Text layoutX="200.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12345" wrappingWidth="94.8033447265625" />
+                  <Text layoutX="199.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EY" wrappingWidth="136.13671875" />
+                  <Text layoutX="196.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Soukra" wrappingWidth="152.13671875" />
+                  <Text layoutX="196.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IT" wrappingWidth="102.80340576171875" />
+                  <Text layoutX="200.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grande" wrappingWidth="138.80340576171875" />
                </children>
             </AnchorPane>
+            <ImageView fitHeight="105.0" fitWidth="110.0" layoutX="593.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="111.0" fitWidth="111.0" layoutX="587.0" layoutY="9.0">
+               <image>
+                  <Image url="@entlogo.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </center>

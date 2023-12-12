@@ -18,6 +18,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class SignUpController implements Initializable {
@@ -34,8 +35,6 @@ static LinkedList<Candidat> list = new LinkedList<>();
     @FXML
     private TextField email;
 
-    @FXML
-    private ImageView imgLogo;
 
     @FXML
     private TextField lastname;
@@ -49,6 +48,10 @@ static LinkedList<Candidat> list = new LinkedList<>();
     private TextField id;
     @FXML
     private TextField cin;
+    @FXML
+    private AnchorPane AnSignup;
+    @FXML
+    private Button back;
     
         @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -113,5 +116,22 @@ private void handleBtnSignup(ActionEvent event) {
        alert.setHeaderText(header);
        alert.setContentText(content);
        alert.showAndWait();
+    }
+
+    @FXML
+    private void handleBtnback(ActionEvent event) {
+         try {
+             FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+
+            // Utilisez le bouton Login pour récupérer la scène
+            Stage stage = (Stage) back.getScene().getWindow();
+
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException ex) {
+            Logger.getLogger(SignUpController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

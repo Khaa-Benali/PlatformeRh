@@ -59,6 +59,11 @@
             </Label>
             <Circle fill="#e0bb93" layoutX="-7.0" layoutY="44.0" radius="72.0" stroke="#e4cb99" strokeType="INSIDE" />
             <Circle fill="#e0bb93" layoutX="-2.0" layoutY="131.0" radius="40.0" stroke="#e4cb99" strokeType="INSIDE" />
+            <Button fx:id="back" layoutX="2.0" layoutY="373.0" mnemonicParsing="false" onAction="#handleBtnback" style="-fx-background-color: white;" text="&lt; Back" textFill="STEELBLUE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>

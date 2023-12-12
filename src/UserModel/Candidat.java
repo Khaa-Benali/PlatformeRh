@@ -1,5 +1,4 @@
 package UserModel;
-import User.recrutement.Authentification;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -95,7 +94,7 @@ public final class Candidat extends User implements Authentification {
     }
 
     @Override
-    public boolean authentifier(String nomUtilisateur, String motDePasse) {
+    public boolean signUp( int id, String nom, String prenom, String email, String username, int cin, String motDePasse) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 }
